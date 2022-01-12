@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+    <h2>Type to search any category</h2> <br>
+
+
+    <input id="myInput" type="text" placeholder="Search..">
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>Kuvira</td>
+                <td>Taneja</td>
+                <td>Kuvira@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Suman</td>
+                <td>Banik</td>
+                <td>Suman@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Neveah</td>
+                <td>Paul</td>
+                <td>Neveh@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Poppy</td>
+                <td>Paul</td>
+                <td>Poppy@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>
